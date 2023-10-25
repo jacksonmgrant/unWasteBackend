@@ -27,7 +27,7 @@ DEBUG = True
 
 developer_ip = '172.17.0.129'
 
-ALLOWED_HOSTS = [developer_ip, '127.0.0.1']
+ALLOWED_HOSTS = [developer_ip, 'localhost','127.0.0.1']
 
 
 # Application definition
