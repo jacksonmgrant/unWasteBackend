@@ -15,7 +15,13 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
-    execute_from_command_line(["manage.py", "runserver", "localhost:8080"])
+    execute_from_command_line(sys.argv)
+    
+    """Use the below as arguments when running the server
+       Can't do other commands here if these are hardcoded
+    developer_ip = "172.17.21.199"
+    current_ip = "localhost"
+    execute_from_command_line(["manage.py", "runserver", current_ip+":8080"])"""
 
 
 if __name__ == '__main__':
