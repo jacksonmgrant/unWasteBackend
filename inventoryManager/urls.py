@@ -11,4 +11,9 @@ urlpatterns = [
 ]
 
 #http://192.168.4.24:8080/inventoryManager/api/questions/
+
+#Anna Home IPv4 Restaurant Form
 #http://192.168.4.24:8080/inventoryManager/api/restaurants/
+
+#UIowa IPv4 Restaurant Form
+#http://172.23.124.194:8080/inventoryManager/api/restaurants/
