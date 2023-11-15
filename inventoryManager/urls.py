@@ -6,6 +6,9 @@ urlpatterns = [
     path("", views.index, name="index"),
     path('api/questions/', views.QuestionList.as_view(), name='question-list'),
     path('api/questions/<int:pk>/', views.QuestionList.as_view(), name='question-detail'),
+    path('api/restaurants/', views.RestaurantList.as_view(), name='restaurant-list'),
+    path('api/restaurants/<int:pk>/', views.RestaurantList.as_view(), name='restaurant-detail'),
 ]
 
 #http://192.168.4.24:8080/inventoryManager/api/questions/
+#http://192.168.4.24:8080/inventoryManager/api/restaurants/
