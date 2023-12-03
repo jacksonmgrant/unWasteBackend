@@ -21,12 +21,13 @@ class Choice(models.Model):
     
 
 class Restaurant(models.Model):
-	location = models.CharField(max_length=50)
-	open_hours = models.IntegerField()
+	location = models.CharField(max_length=500)
+	open_hours = models.CharField(max_length=500)
 	available_for_pickup = models.DateTimeField()
-	cuisine_type = models.CharField(max_length=50) #Chinese, Mexican, Burgers, Pizza, Health Food, Fast Food, etc.
+	cuisine_type = models.CharField(max_length=500) #Chinese, Mexican, Burgers, Pizza, Health Food, Fast Food, etc.
 
 class FoodsInventory(models.Model):
-    dietary_restriction = models.CharField(max_length=50) #gluten_free, vegan, low carb, lactose free
-    food_name = models.CharField(max_length=50)
+    dietary_restriction = models.CharField(max_length=500) #gluten_free, vegan, low carb, lactose free
+    food_name = models.CharField(max_length=500)
     food_description = models.CharField(max_length=500) #restaurant’s description of the food 
+    
