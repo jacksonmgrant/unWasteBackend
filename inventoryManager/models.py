@@ -30,4 +30,12 @@ class FoodsInventory(models.Model):
     dietary_restriction = models.CharField(max_length=500) #gluten_free, vegan, low carb, lactose free
     food_name = models.CharField(max_length=500)
     food_description = models.CharField(max_length=500) #restaurant’s description of the food 
+    food_quantity = models.IntegerField(default= 0)
+    package_size = models.CharField(max_length=500)
+    
+class ExampleRestaurant(models.Model):
+    restaurant = models.ForeignKey(Restaurant)
+    restaurant_foodInventory = models.ManyToManyField(
+        
+    )
     
