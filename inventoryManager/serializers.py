@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Question, Restaurant
+from .models import Question, Restaurant, FoodsInventory
 
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,4 +10,9 @@ class QuestionSerializer(serializers.ModelSerializer):
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
+        fields = '__all__'
+        
+class FoodsInventorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FoodsInventory
         fields = '__all__'

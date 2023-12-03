@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import generics
-from .models import Question, Restaurant
-from .serializers import QuestionSerializer, RestaurantSerializer
+from .models import Question, Restaurant, FoodsInventory
+from .serializers import QuestionSerializer, RestaurantSerializer, FoodsInventorySerializer
 
 
 def index(request):
@@ -23,3 +23,11 @@ class RestaurantList(generics.ListCreateAPIView):
 class RestaurantDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
+    
+class FoodsInventoryList(generics.ListCreateAPIView):
+    queryset = FoodsInventory.objects.all()
+    serializer_class = FoodsInventorySerializer
+
+class FoodsInventoryDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FoodsInventory.objects.all()
+    serializer_class = FoodsInventorySerializer
