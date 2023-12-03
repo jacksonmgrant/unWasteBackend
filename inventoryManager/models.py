@@ -32,6 +32,6 @@ class FoodsInventory(models.Model):
     food_description = models.CharField(max_length=500) #restaurant’s description of the food 
     food_quantity = models.IntegerField(default= 0)
     package_size = models.CharField(max_length=500)
-    expiration_date = models.DateTimeField()
+    expiration_date = models.DateTimeField(default=timezone.now)
     food_category = models.CharField(max_length=50) #meat, produce, dairy, dry goods, to-go, frozen
     
